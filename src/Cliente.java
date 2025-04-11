@@ -1,16 +1,19 @@
-public class Cliente {
+import java.util.ArrayList;
+import java.util.List;
 
+public class Cliente {
     protected String nombre;
     protected String correo;
-    protected List<Producto> productosComprados;
+    protected List<Compra> compras; // Lista de compras
 
     public Cliente() {
+        this.compras = new ArrayList<>();
     }
 
-    public Cliente(String nombre, String correo, List<Producto> productosComprados) {
+    public Cliente(String nombre, String correo) {
         this.nombre = nombre;
         this.correo = correo;
-        this.productosComprados = productosComprados;
+        this.compras = new ArrayList<>();
     }
 
     public String getNombre() {
@@ -29,12 +32,12 @@ public class Cliente {
         this.correo = correo;
     }
 
-    public List<Producto> getProductosComprados() {
-        return productosComprados;
+    public List<Compra> getCompras() {
+        return compras;
     }
 
-    public void setProductosComprados(List<Producto> productosComprados) {
-        this.productosComprados = productosComprados;
+    public void setCompras(List<Compra> compras) {
+        this.compras = compras;
     }
 
     @Override
@@ -42,7 +45,8 @@ public class Cliente {
         return "Cliente{" +
                 "nombre='" + nombre + '\'' +
                 ", correo='" + correo + '\'' +
-                ", productosComprados=" + productosComprados +
+                ", compras=" + compras +
                 '}';
     }
 }
+

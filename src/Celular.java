@@ -33,7 +33,7 @@ public class Celular extends Producto implements Vendible {
     public double calcularPrecioVenta(int cantidad) {
         double precioFinal = precio * cantidad;
         if (cantidad > 5) {
-            precioFinal *= 0.80;
+            precioFinal *= 0.85;
         }
         return precioFinal;
     }
